@@ -1,6 +1,6 @@
 import  express  from "express";
 import bodyParser from 'body-parser';
-import serverlessHtttp from 'serverless-http';
+import ServerlessHttp from "serverless-http";
 const app = express();
 
 
@@ -21,8 +21,7 @@ app.post('/addNewUser', (req, res)=>{
     res.send('Successfully added');
 });
 
-
-export const heandler = serverlessHtttp(app);
+export const handler = ServerlessHttp(app);
 
 
 /*
